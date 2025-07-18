@@ -50,6 +50,12 @@ navigate('/')
         <img className='max-w-44 aspect-square rounded-full mx-10 maz-sm:mt-10' src={assets.logo_icon} alt="" />
       </div>
       
+import React from 'react'
+
+const ProfilePage = () => {
+  return (
+    <div>
+      <h1>Profile Page</h1>
     </div>
   )
 }
