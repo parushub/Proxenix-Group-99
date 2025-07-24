@@ -1,7 +1,8 @@
-import { generateToken } from "../../src/lib/db.js";
-import User from "../models/user.js";
+
+import User from "../models/User.js";
 import bcrypt from"bcryptjs";
 import cloudinary from "../lib/cloudinary.js";
+import { generateToken } from "../lib/utils.js";
 
 // signup a new user
 export const signup = async (req, res)=>{
@@ -24,7 +25,8 @@ export const signup = async (req, res)=>{
             fullName, email, password: hashedPassword,bio
         });
 
-        const token = generateToken(newUser._id)
+      //   const token = generateToken(newUser._id)
+      const token = generateToken(newUser._id)
 
         res.json({success: true, useerData: newUser, token, message: "Account created successfully" })
         
